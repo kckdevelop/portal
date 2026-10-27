@@ -265,7 +265,7 @@
         <!-- Admin Footer -->
         <footer class="px-6 py-4 border-t border-slate-800 text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-2">
             <span>&copy; {{ date('Y') }} {{ \App\Models\Setting::get('school_name', 'SMK Muhammadiyah 1 Bantul') }}. Seluruh hak cipta dilindungi.</span>
-            <span>Versi Portal Expo 1.0 &bull; RPL & PPLG</span>
+            <span>Versi Portal Expo 1.0 &bull; TKR, TPM, TSM, TAV & PPLG</span>
         </footer>
     </div>
 

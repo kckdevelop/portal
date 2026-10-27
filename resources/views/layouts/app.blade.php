@@ -222,7 +222,7 @@
                         </div>
                     </div>
                     <p class="text-sm text-slate-400 leading-relaxed max-w-md">
-                        Portal resmi etalase karya inovasi teknologi digital siswa Jurusan Rekayasa Perangkat Lunak (RPL / PPLG) & Sistem Informasi Jaringan dan Aplikasi (SIJA) SMK Muhammadiyah 1 Bantul.
+                        Portal resmi etalase karya Tugas Akhir siswa Jurusan TKR, TPM, TSM, TAV, dan PPLG SMK Muhammadiyah 1 Bantul.
                     </p>
                     <div class="text-xs text-slate-400 flex flex-col gap-1.5 pt-1">
                         <div><i class="fa-solid fa-location-dot text-cyan-400 w-5"></i> Jl. Parangtritis No.KM. 11, Manding, Sabdodadi, Bantul, DIY 55715</div>
@@ -275,6 +275,7 @@
     </footer>
 
     <!-- Floating Bottom Action Button for fast guestbook access -->
+    @unless(request()->routeIs('guestbook.*'))
     <div class="fixed bottom-5 right-5 z-40">
         <a href="{{ route('guestbook.index') }}" 
            style="background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%); box-shadow: 0 10px 25px -3px rgba(245, 158, 11, 0.6), 0 0 20px rgba(234, 88, 12, 0.5);"
@@ -287,6 +288,7 @@
             <span class="tracking-tight uppercase font-black text-xs sm:text-sm drop-shadow-sm">Buku Tamu</span>
         </a>
     </div>
+    @endunless
 
     <!-- Mobile Navigation Toggle Script -->
     <script>

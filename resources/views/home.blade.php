@@ -27,7 +27,7 @@
 
             <!-- Subtitle -->
             <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-                Jelajahi inovasi perangkat lunak, aplikasi mobile, game edukasi, dan proyek IoT karya talenta muda siswa RPL & PPLG Musaba Bantul. Terbuka untuk industri, akademisi, dan publik.
+                Jelajahi karya inovasi dan kreativitas siswa Jurusan TKR, TPM, TSM, TAV, dan PPLG Musaba Bantul. Terbuka untuk industri, akademisi, dan publik.
             </p>
 
             <!-- Call to Actions -->
@@ -89,7 +89,7 @@
                     Katalog Karya Siswa Musaba
                 </h2>
                 <p class="text-sm sm:text-base text-slate-600 mt-1 max-w-xl">
-                    Pilih jurusan atau karya untuk melihat detail spesifikasi teknologi, galeri foto karya, pengembang, dan presentasi lengkap di Canva.
+                    Pilih jurusan atau karya untuk melihat detail spesifikasi teknologi, galeri foto karya, pengembang, dan presentasi lengkap dari setiap proyek.
                 </p>
             </div>
 
@@ -299,7 +299,7 @@
                     Mengasah Kemampuan Teknologi Nyata di SMK Muhammadiyah 1 Bantul
                 </h2>
                 <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
-                    Pameran ini merupakan etalase karya Proyek Kreatif & Kewirausahaan (PKK) serta Tugas Akhir siswa Jurusan <strong>Rekayasa Perangkat Lunak (RPL)</strong> dan <strong>Sistem Informasi Jaringan & Aplikasi (SIJA)</strong>.
+                    Pameran ini merupakan etalase karya Proyek Kreatif & Kewirausahaan (PKK) serta Tugas Akhir siswa Jurusan <strong>Teknik Kendaraan Ringan (TKR)</strong>, <strong>Teknik Pemesinan (TPM)</strong>, <strong>Teknik Sepeda Motor (TSM)</strong>, <strong>Teknik Audio Video (TAV)</strong>, dan <strong>Pengembangan Perangkat Lunak & Gim (PPLG)</strong>.
                 </p>
                 <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
                     Melalui kurikulum berbasis industri dan project-based learning, siswa Musaba dilatih membangun solusi perangkat lunak yang menjawab persoalan nyata di sekolah, UMKM lokal Bantul, hingga industri nasional.
@@ -308,7 +308,7 @@
                 <div class="pt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm font-semibold text-slate-800">
                     <div class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-cyan-600 text-base"></i> Berorientasi Problem Solving</div>
                     <div class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-cyan-600 text-base"></i> Standar Clean Code & Git</div>
-                    <div class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-cyan-600 text-base"></i> Presentasi Mandiri Canva</div>
+                    <div class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-cyan-600 text-base"></i> Presentasi Mandiri &amp; Dokumentasi</div>
                     <div class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-cyan-600 text-base"></i> Bimbingan Guru & Praktisi</div>
                 </div>
             </div>

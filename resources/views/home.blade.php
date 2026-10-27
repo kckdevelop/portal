@@ -35,10 +35,11 @@
                 <!-- Primary CTA: Isi Buku Tamu -->
                 <div class="relative group w-full sm:w-auto">
                     <!-- Crisp Ambient Glow Effect -->
-                    <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 rounded-2xl blur-lg opacity-85 group-hover:opacity-100 transition duration-300"></div>
+                    <div style="background: linear-gradient(135deg, #06b6d4 0%, #14b8a6 50%, #10b981 100%);" class="absolute -inset-1 rounded-2xl blur-lg opacity-85 group-hover:opacity-100 transition duration-300"></div>
 
                     <a href="{{ route('guestbook.index') }}" 
-                       class="relative w-full sm:w-auto inline-flex items-center justify-center gap-3.5 px-8 py-4 sm:py-5 rounded-2xl text-base sm:text-lg font-black text-slate-950 bg-gradient-to-r from-cyan-300 via-teal-300 to-emerald-300 hover:from-cyan-200 hover:via-teal-200 hover:to-emerald-200 shadow-2xl shadow-cyan-500/50 border-2 border-white hover:scale-[1.03] active:scale-[0.98] transition-all duration-300">
+                       style="background: linear-gradient(135deg, #22d3ee 0%, #2dd4bf 50%, #34d399 100%);"
+                       class="relative w-full sm:w-auto inline-flex items-center justify-center gap-3.5 px-8 py-4 sm:py-5 rounded-2xl text-base sm:text-lg font-black text-slate-950 shadow-2xl shadow-cyan-500/50 border-2 border-white hover:scale-[1.03] active:scale-[0.98] transition-all duration-300">
                         <span class="flex items-center justify-center w-11 h-11 rounded-xl bg-slate-950 text-cyan-300 shadow-md border border-cyan-400/40 group-hover:scale-110 transition-transform duration-300 shrink-0">
                             <i class="fa-solid fa-camera-retro text-xl"></i>
                         </span>

@@ -152,15 +152,9 @@
                     @endauth
                 </nav>
 
-                <!-- Header CTA Button -->
-                <div class="flex items-center gap-2 sm:gap-3">
-                    <a href="{{ route('guestbook.index') }}" class="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs sm:text-sm font-black text-slate-950 bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 hover:from-cyan-300 hover:to-teal-200 border-2 border-white/80 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/60 hover:scale-105 active:scale-95 transition-all">
-                        <i class="fa-solid fa-camera-retro text-sm text-slate-950"></i>
-                        <span class="tracking-tight">Isi Buku Tamu</span>
-                    </a>
-
-                    <!-- Mobile Menu Hamburger Button -->
-                    <button id="mobileMenuBtn" type="button" aria-label="Buka Menu" class="md:hidden p-2 text-slate-300 hover:text-white rounded-lg focus:outline-none">
+                <!-- Mobile Menu Hamburger Button -->
+                <div class="flex items-center">
+                    <button id="mobileMenuBtn" type="button" aria-label="Buka Menu" class="md:hidden p-2.5 text-slate-300 hover:text-white hover:bg-slate-800/80 rounded-xl focus:outline-none transition-colors">
                         <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
                     </button>
                 </div>
@@ -280,11 +274,17 @@
         </div>
     </footer>
 
-    <!-- Mobile Floating Bottom Action Button for fast guestbook access on HP -->
-    <div class="sm:hidden fixed bottom-5 right-5 z-40">
-        <a href="{{ route('guestbook.index') }}" class="flex items-center gap-2.5 px-5 py-3.5 bg-gradient-to-r from-cyan-400 to-teal-400 text-slate-950 font-black text-sm rounded-full shadow-2xl shadow-cyan-400/50 border-2 border-white hover:scale-105 active:scale-95 transition-transform">
-            <i class="fa-solid fa-camera-retro text-base"></i>
-            <span>Buku Tamu</span>
+    <!-- Floating Bottom Action Button for fast guestbook access -->
+    <div class="fixed bottom-5 right-5 z-40">
+        <a href="{{ route('guestbook.index') }}" 
+           style="background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%); box-shadow: 0 10px 25px -3px rgba(245, 158, 11, 0.6), 0 0 20px rgba(234, 88, 12, 0.5);"
+           class="flex items-center gap-2.5 px-5 py-3 sm:px-6 sm:py-3.5 rounded-full text-white font-black text-sm sm:text-base border-2 border-white hover:scale-105 active:scale-95 transition-all shadow-2xl group cursor-pointer">
+            <span class="relative flex h-2.5 w-2.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-90"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+            </span>
+            <i class="fa-solid fa-camera-retro text-base sm:text-lg text-white group-hover:rotate-12 transition-transform"></i>
+            <span class="tracking-tight uppercase font-black text-xs sm:text-sm drop-shadow-sm">Buku Tamu</span>
         </a>
     </div>
 

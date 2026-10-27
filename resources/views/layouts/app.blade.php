@@ -154,9 +154,9 @@
 
                 <!-- Header CTA Button -->
                 <div class="flex items-center gap-2 sm:gap-3">
-                    <a href="{{ route('guestbook.index') }}" class="inline-flex items-center gap-2 px-3.5 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold text-slate-950 bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 hover:from-cyan-300 hover:to-teal-200 shadow-md shadow-cyan-500/25 hover:shadow-cyan-400/40 hover:-translate-y-0.5 transition-all active:scale-95">
-                        <i class="fa-solid fa-camera-retro text-sm"></i>
-                        <span>Isi Buku Tamu</span>
+                    <a href="{{ route('guestbook.index') }}" class="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs sm:text-sm font-black text-slate-950 bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 hover:from-cyan-300 hover:to-teal-200 border-2 border-white/80 shadow-lg shadow-cyan-400/40 hover:shadow-cyan-400/60 hover:scale-105 active:scale-95 transition-all">
+                        <i class="fa-solid fa-camera-retro text-sm text-slate-950"></i>
+                        <span class="tracking-tight">Isi Buku Tamu</span>
                     </a>
 
                     <!-- Mobile Menu Hamburger Button -->
@@ -282,8 +282,8 @@
 
     <!-- Mobile Floating Bottom Action Button for fast guestbook access on HP -->
     <div class="sm:hidden fixed bottom-5 right-5 z-40">
-        <a href="{{ route('guestbook.index') }}" class="flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-cyan-500 to-teal-500 text-slate-950 font-bold text-sm rounded-full shadow-xl shadow-cyan-500/30 hover:scale-105 active:scale-95 transition-transform">
-            <i class="fa-solid fa-camera"></i>
+        <a href="{{ route('guestbook.index') }}" class="flex items-center gap-2.5 px-5 py-3.5 bg-gradient-to-r from-cyan-400 to-teal-400 text-slate-950 font-black text-sm rounded-full shadow-2xl shadow-cyan-400/50 border-2 border-white hover:scale-105 active:scale-95 transition-transform">
+            <i class="fa-solid fa-camera-retro text-base"></i>
             <span>Buku Tamu</span>
         </a>
     </div>

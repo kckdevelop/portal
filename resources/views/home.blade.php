@@ -34,30 +34,31 @@
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 pt-4">
                 <!-- Primary CTA: Isi Buku Tamu -->
                 <div class="relative group w-full sm:w-auto">
-                    <!-- Ambient Glow Effect -->
-                    <div class="absolute -inset-1 bg-gradient-to-r from-teal-400 via-cyan-400 to-emerald-400 rounded-2xl blur-md opacity-75 group-hover:opacity-100 transition duration-300 group-hover:duration-200"></div>
+                    <!-- Crisp Ambient Glow Effect -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 rounded-2xl blur-lg opacity-85 group-hover:opacity-100 transition duration-300"></div>
 
                     <a href="{{ route('guestbook.index') }}" 
-                       class="relative w-full sm:w-auto inline-flex items-center justify-center gap-3.5 px-8 py-4 sm:py-4.5 rounded-2xl text-base sm:text-lg font-black text-slate-950 bg-gradient-to-r from-teal-200 via-cyan-200 to-emerald-300 hover:from-white hover:via-cyan-100 hover:to-teal-200 shadow-xl border-2 border-white/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300">
-                        <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-950 text-cyan-300 shadow-md group-hover:scale-110 transition-transform duration-300 shrink-0">
-                            <i class="fa-solid fa-camera-retro text-lg"></i>
+                       class="relative w-full sm:w-auto inline-flex items-center justify-center gap-3.5 px-8 py-4 sm:py-5 rounded-2xl text-base sm:text-lg font-black text-slate-950 bg-gradient-to-r from-cyan-300 via-teal-300 to-emerald-300 hover:from-cyan-200 hover:via-teal-200 hover:to-emerald-200 shadow-2xl shadow-cyan-500/50 border-2 border-white hover:scale-[1.03] active:scale-[0.98] transition-all duration-300">
+                        <span class="flex items-center justify-center w-11 h-11 rounded-xl bg-slate-950 text-cyan-300 shadow-md border border-cyan-400/40 group-hover:scale-110 transition-transform duration-300 shrink-0">
+                            <i class="fa-solid fa-camera-retro text-xl"></i>
                         </span>
                         <div class="text-left">
-                            <span class="block text-slate-950 font-black tracking-tight leading-tight">Isi Buku Tamu & Foto Selfie</span>
-                            <span class="block text-[11px] font-bold text-teal-900/80 tracking-wide uppercase">Wajib untuk Pengunjung Pameran</span>
+                            <span class="block text-slate-950 font-black tracking-tight leading-tight text-base sm:text-lg">Isi Buku Tamu & Foto Selfie</span>
+                            <span class="block text-[11px] font-black text-teal-950 tracking-wider uppercase">Wajib untuk Pengunjung Pameran</span>
                         </div>
-                        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-950/10 group-hover:bg-slate-950 group-hover:text-cyan-300 transition-all duration-300 ml-1 shrink-0">
-                            <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-0.5"></i>
+                        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-950 text-cyan-300 shadow-sm transition-all duration-300 ml-1 shrink-0 group-hover:translate-x-1">
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
                         </span>
                     </a>
                 </div>
 
                 <!-- Secondary CTA: Scroll to Catalog -->
-                <a href="#katalog-karya" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 sm:py-4.5 rounded-2xl text-base font-bold text-slate-200 bg-slate-800/90 hover:bg-slate-800 border border-slate-700 hover:border-cyan-400/50 hover:text-white hover:shadow-lg hover:shadow-cyan-950/40 hover:-translate-y-0.5 transition-all duration-300 group">
-                    <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-slate-700/60 text-cyan-400 border border-slate-600/50 group-hover:scale-105 transition-transform shrink-0">
-                        <i class="fa-solid fa-cubes text-base"></i>
+                <a href="#katalog-karya" class="w-full sm:w-auto inline-flex items-center justify-center gap-3.5 px-8 py-4 sm:py-5 rounded-2xl text-base sm:text-lg font-black text-white bg-slate-900/95 hover:bg-slate-800 border-2 border-cyan-400/70 hover:border-cyan-300 shadow-2xl shadow-slate-950/60 hover:shadow-cyan-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group">
+                    <span class="flex items-center justify-center w-11 h-11 rounded-xl bg-cyan-500/20 text-cyan-300 border border-cyan-400/40 group-hover:scale-105 transition-transform shrink-0">
+                        <i class="fa-solid fa-cubes text-lg"></i>
                     </span>
-                    <span>Jelajahi Katalog Aplikasi</span>
+                    <span class="tracking-tight">Jelajahi Katalog Aplikasi</span>
+                    <i class="fa-solid fa-chevron-down text-xs text-cyan-400 group-hover:translate-y-0.5 transition-transform"></i>
                 </a>
             </div>
 

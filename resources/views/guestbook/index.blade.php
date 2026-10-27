@@ -167,8 +167,9 @@
                                     <i class="fa-solid fa-camera"></i>
                                 </div>
                                 <p class="text-xs text-slate-300 font-medium">Klik tombol di bawah untuk mengaktifkan kamera</p>
-                                <button type="button" id="startCameraBtn" class="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs shadow-md transition-all">
-                                    <i class="fa-solid fa-power-off mr-1.5"></i> Buka Kamera
+                                <button type="button" id="startCameraBtn" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 text-slate-950 font-black text-sm sm:text-base shadow-xl shadow-cyan-500/40 border-2 border-white/90 hover:scale-105 active:scale-95 transition-all cursor-pointer">
+                                    <i class="fa-solid fa-camera text-slate-950 text-lg"></i>
+                                    <span>Buka Kamera Selfie</span>
                                 </button>
                             </div>
 
@@ -187,28 +188,30 @@
                             </div>
 
                             <!-- Live Camera Controls Overlay (When camera is active) -->
-                            <div id="cameraControls" class="hidden absolute bottom-3 inset-x-0 flex items-center justify-center gap-3 z-10 px-4">
+                            <div id="cameraControls" class="hidden absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent pt-8 pb-4 flex items-center justify-center gap-4 z-20 px-4">
                                 <!-- Switch Camera (Front/Back) -->
-                                <button type="button" id="switchCameraBtn" title="Ganti Kamera Depan/Belakang" class="p-2.5 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white border border-slate-700 text-xs transition-all">
+                                <button type="button" id="switchCameraBtn" title="Ganti Kamera Depan/Belakang" class="w-12 h-12 rounded-full bg-slate-900/95 hover:bg-slate-800 text-white border-2 border-white/60 hover:border-cyan-400 shadow-xl flex items-center justify-center text-sm transition-all hover:scale-105 active:scale-95 cursor-pointer">
                                     <i class="fa-solid fa-camera-rotate"></i>
                                 </button>
 
-                                <!-- Shutter Snap Button -->
-                                <button type="button" id="snapBtn" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-cyan-400 to-teal-400 hover:from-cyan-300 hover:to-teal-300 text-slate-950 font-extrabold text-xs shadow-lg shadow-cyan-500/40 active:scale-95 transition-all flex items-center gap-2">
-                                    <i class="fa-solid fa-circle text-rose-500 text-[10px] animate-pulse"></i>
-                                    <span>Ambil Foto</span>
+                                <!-- Shutter Snap Button: Ambil Foto Selfie -->
+                                <button type="button" id="snapBtn" class="group px-7 sm:px-9 py-3.5 rounded-full bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 text-slate-950 font-black text-sm sm:text-base shadow-2xl shadow-cyan-400/60 ring-4 ring-white border-2 border-slate-950 hover:scale-105 active:scale-95 transition-all flex items-center gap-3 cursor-pointer">
+                                    <span class="w-3.5 h-3.5 rounded-full bg-rose-600 animate-ping"></span>
+                                    <i class="fa-solid fa-camera text-base sm:text-lg text-slate-950"></i>
+                                    <span class="tracking-tight uppercase font-black text-xs sm:text-sm">Ambil Foto Selfie</span>
                                 </button>
 
                                 <!-- Stop Camera Button -->
-                                <button type="button" id="stopCameraBtn" title="Matikan Kamera" class="p-2.5 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white border border-slate-700 text-xs transition-all">
-                                    <i class="fa-solid fa-xmark"></i>
+                                <button type="button" id="stopCameraBtn" title="Matikan Kamera" class="w-12 h-12 rounded-full bg-slate-900/95 hover:bg-rose-950 text-white hover:text-rose-300 border-2 border-white/60 hover:border-rose-400 shadow-xl flex items-center justify-center text-sm transition-all hover:scale-105 active:scale-95 cursor-pointer">
+                                    <i class="fa-solid fa-xmark text-base"></i>
                                 </button>
                             </div>
 
                             <!-- Retake Controls (When snapshot is already taken) -->
-                            <div id="retakeControls" class="hidden absolute bottom-3 inset-x-0 flex items-center justify-center gap-2 z-10 px-4">
-                                <button type="button" id="retakeBtn" class="px-4 py-2 rounded-xl bg-slate-900/90 hover:bg-slate-900 text-white border border-slate-700 text-xs font-semibold backdrop-blur-md transition-all flex items-center gap-1.5">
-                                    <i class="fa-solid fa-rotate-left"></i> Foto Ulang (Retake)
+                            <div id="retakeControls" class="hidden absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent pt-8 pb-4 flex items-center justify-center gap-3 z-20 px-4">
+                                <button type="button" id="retakeBtn" class="px-6 py-3 rounded-full bg-slate-950/95 hover:bg-slate-900 text-white border-2 border-cyan-400 hover:border-cyan-300 text-xs sm:text-sm font-black shadow-2xl backdrop-blur-md hover:scale-105 active:scale-95 transition-all flex items-center gap-2 cursor-pointer">
+                                    <i class="fa-solid fa-rotate-left text-cyan-400 text-sm"></i>
+                                    <span>Foto Ulang (Ambil Ulang Selfie)</span>
                                 </button>
                             </div>
 
@@ -259,10 +262,10 @@
                 <button 
                     type="submit" 
                     id="submitBtn" 
-                    class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-cyan-500 via-teal-400 to-emerald-400 hover:from-cyan-400 hover:to-teal-300 text-slate-950 font-extrabold text-sm sm:text-base shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 active:scale-98 transition-all flex items-center justify-center gap-2 group"
+                    class="w-full py-4.5 px-6 rounded-2xl bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 hover:from-cyan-300 hover:via-teal-200 hover:to-emerald-300 text-slate-950 font-black text-base sm:text-lg shadow-2xl shadow-cyan-500/40 hover:shadow-cyan-400/60 hover:-translate-y-0.5 active:scale-98 border-2 border-white/80 transition-all flex items-center justify-center gap-3 group cursor-pointer"
                 >
-                    <i class="fa-solid fa-paper-plane text-base group-hover:translate-x-1 transition-transform"></i>
-                    <span id="btnText">Simpan Buku Tamu & Kirim Selfie</span>
+                    <i class="fa-solid fa-paper-plane text-lg text-slate-950 group-hover:translate-x-1 transition-transform"></i>
+                    <span id="btnText" class="tracking-tight">Simpan Buku Tamu & Kirim Selfie</span>
                 </button>
 
                 <p class="text-[11px] text-center text-slate-400">

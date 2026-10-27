@@ -242,10 +242,10 @@
                         Apresiasi dari pengunjung pameran menjadi motivasi besar bagi siswa SMK Muhammadiyah 1 Bantul untuk terus berinovasi.
                     </p>
                     <a href="{{ route('guestbook.index') }}" 
-                       class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-slate-950 bg-gradient-to-r from-cyan-400 to-teal-300 hover:from-cyan-300 hover:to-teal-200 shadow-md transition-all active:scale-95">
-                        <i class="fa-solid fa-camera-retro"></i>
+                       class="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-black text-slate-950 bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 hover:from-cyan-300 hover:to-teal-200 border-2 border-white/80 shadow-lg shadow-cyan-400/30 hover:scale-[1.02] active:scale-95 transition-all">
+                        <i class="fa-solid fa-camera-retro text-sm"></i>
                         <span>Isi Buku Tamu & Selfie Sekarang</span>
-                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
                 </div>
 

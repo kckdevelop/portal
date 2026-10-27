@@ -158,8 +158,8 @@
                     <!-- 1. LIVE CAMERA CONTAINER -->
                     <div id="cameraSection" class="space-y-3">
                         
-                        <!-- Video Viewfinder & Canvas & Snapshot Preview Box -->
-                        <div class="relative w-full aspect-video sm:aspect-[4/3] max-h-72 bg-slate-900 rounded-2xl overflow-hidden flex items-center justify-center border border-slate-800 shadow-inner">
+                        <!-- Video Viewfinder & Canvas & Snapshot Preview Box (Portrait 3:4) -->
+                        <div class="relative mx-auto bg-slate-900 rounded-2xl overflow-hidden flex items-center justify-center border border-slate-800 shadow-inner" style="width: 100%; max-width: 320px; aspect-ratio: 3/4;">
                             
                             <!-- Placeholder when camera is inactive -->
                             <div id="cameraPlaceholder" class="text-center p-6 space-y-3">
@@ -167,10 +167,6 @@
                                     <i class="fa-solid fa-camera"></i>
                                 </div>
                                 <p class="text-xs text-slate-300 font-medium">Klik tombol di bawah untuk mengaktifkan kamera</p>
-                                <button type="button" id="startCameraBtn" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 text-slate-950 font-black text-sm sm:text-base shadow-xl shadow-cyan-500/40 border-2 border-white/90 hover:scale-105 active:scale-95 transition-all cursor-pointer">
-                                    <i class="fa-solid fa-camera text-slate-950 text-lg"></i>
-                                    <span>Buka Kamera Selfie</span>
-                                </button>
                             </div>
 
                             <!-- Live Video Stream -->
@@ -187,34 +183,42 @@
                                 </div>
                             </div>
 
-                            <!-- Live Camera Controls Overlay (When camera is active) -->
-                            <div id="cameraControls" class="hidden absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent pt-8 pb-4 flex items-center justify-center gap-4 z-20 px-4">
-                                <!-- Switch Camera (Front/Back) -->
-                                <button type="button" id="switchCameraBtn" title="Ganti Kamera Depan/Belakang" class="w-12 h-12 rounded-full bg-slate-900/95 hover:bg-slate-800 text-white border-2 border-white/60 hover:border-cyan-400 shadow-xl flex items-center justify-center text-sm transition-all hover:scale-105 active:scale-95 cursor-pointer">
-                                    <i class="fa-solid fa-camera-rotate"></i>
-                                </button>
+                        </div>
 
-                                <!-- Shutter Snap Button: Ambil Foto Selfie -->
-                                <button type="button" id="snapBtn" class="group px-7 sm:px-9 py-3.5 rounded-full bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 text-slate-950 font-black text-sm sm:text-base shadow-2xl shadow-cyan-400/60 ring-4 ring-white border-2 border-slate-950 hover:scale-105 active:scale-95 transition-all flex items-center gap-3 cursor-pointer">
-                                    <span class="w-3.5 h-3.5 rounded-full bg-rose-600 animate-ping"></span>
-                                    <i class="fa-solid fa-camera text-base sm:text-lg text-slate-950"></i>
-                                    <span class="tracking-tight uppercase font-black text-xs sm:text-sm">Ambil Foto Selfie</span>
-                                </button>
+                        <!-- Start Camera Button: Visible below viewfinder when inactive -->
+                        <div id="startCameraWrapper" class="flex items-center justify-center mt-3">
+                            <button type="button" id="startCameraBtn" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-2xl bg-gradient-to-r from-orange-500 via-rose-500 to-pink-500 hover:from-orange-400 hover:to-pink-400 text-white font-black text-sm sm:text-base shadow-xl shadow-rose-500/40 ring-4 ring-white/80 border-2 border-white/90 hover:scale-105 active:scale-95 transition-all cursor-pointer">
+                                <i class="fa-solid fa-camera text-white text-lg"></i>
+                                <span>Buka Kamera Selfie</span>
+                            </button>
+                        </div>
 
-                                <!-- Stop Camera Button -->
-                                <button type="button" id="stopCameraBtn" title="Matikan Kamera" class="w-12 h-12 rounded-full bg-slate-900/95 hover:bg-rose-950 text-white hover:text-rose-300 border-2 border-white/60 hover:border-rose-400 shadow-xl flex items-center justify-center text-sm transition-all hover:scale-105 active:scale-95 cursor-pointer">
-                                    <i class="fa-solid fa-xmark text-base"></i>
-                                </button>
-                            </div>
+                        <!-- Camera Controls: Below the viewfinder (not overlapping) -->
+                        <div id="cameraControls" class="hidden flex items-center justify-center gap-4 px-4 mt-3">
+                            <!-- Switch Camera (Front/Back) -->
+                            <button type="button" id="switchCameraBtn" title="Ganti Kamera Depan/Belakang" class="w-12 h-12 rounded-full bg-slate-700 hover:bg-slate-600 text-white border-2 border-slate-500 hover:border-cyan-400 shadow-xl flex items-center justify-center text-sm transition-all hover:scale-105 active:scale-95 cursor-pointer">
+                                <i class="fa-solid fa-camera-rotate"></i>
+                            </button>
 
-                            <!-- Retake Controls (When snapshot is already taken) -->
-                            <div id="retakeControls" class="hidden absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent pt-8 pb-4 flex items-center justify-center gap-3 z-20 px-4">
-                                <button type="button" id="retakeBtn" class="px-6 py-3 rounded-full bg-slate-950/95 hover:bg-slate-900 text-white border-2 border-cyan-400 hover:border-cyan-300 text-xs sm:text-sm font-black shadow-2xl backdrop-blur-md hover:scale-105 active:scale-95 transition-all flex items-center gap-2 cursor-pointer">
-                                    <i class="fa-solid fa-rotate-left text-cyan-400 text-sm"></i>
-                                    <span>Foto Ulang (Ambil Ulang Selfie)</span>
-                                </button>
-                            </div>
+                            <!-- Shutter Snap Button: Ambil Foto Selfie -->
+                            <button type="button" id="snapBtn" class="group px-7 sm:px-9 py-3.5 rounded-full bg-gradient-to-r from-orange-500 via-rose-500 to-pink-500 hover:from-orange-400 hover:via-rose-400 hover:to-pink-400 text-white font-black text-sm sm:text-base shadow-2xl shadow-rose-500/60 ring-4 ring-white/90 border-2 border-white hover:scale-105 active:scale-95 transition-all flex items-center gap-3 cursor-pointer">
+                                <span class="w-3.5 h-3.5 rounded-full bg-white animate-ping"></span>
+                                <i class="fa-solid fa-camera text-base sm:text-lg text-white"></i>
+                                <span class="tracking-tight uppercase font-black text-xs sm:text-sm">Ambil Foto</span>
+                            </button>
 
+                            <!-- Stop Camera Button -->
+                            <button type="button" id="stopCameraBtn" title="Matikan Kamera" class="w-12 h-12 rounded-full bg-slate-700 hover:bg-rose-950 text-white hover:text-rose-300 border-2 border-slate-500 hover:border-rose-400 shadow-xl flex items-center justify-center text-sm transition-all hover:scale-105 active:scale-95 cursor-pointer">
+                                <i class="fa-solid fa-xmark text-base"></i>
+                            </button>
+                        </div>
+
+                        <!-- Retake Controls (When snapshot is already taken) -->
+                        <div id="retakeControls" class="hidden flex items-center justify-center gap-3 mt-3 px-4">
+                            <button type="button" id="retakeBtn" class="px-6 py-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white border-2 border-cyan-400 hover:border-cyan-300 text-xs sm:text-sm font-black shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-2 cursor-pointer">
+                                <i class="fa-solid fa-rotate-left text-cyan-400 text-sm"></i>
+                                <span>Foto Ulang (Ambil Ulang Selfie)</span>
+                            </button>
                         </div>
 
                         <!-- Camera Error / Permission Notice -->
@@ -456,6 +460,7 @@
     const cameraError = document.getElementById('cameraError');
     const cameraErrorMessage = document.getElementById('cameraErrorMessage');
     const selfieImageBase64 = document.getElementById('selfieImageBase64');
+    const startCameraWrapper = document.getElementById('startCameraWrapper');
 
     let currentStream = null;
     let currentFacingMode = 'user'; // 'user' for selfie / front camera, 'environment' for back
@@ -500,6 +505,7 @@
             webcam.classList.remove('hidden');
             cameraPlaceholder.classList.add('hidden');
             cameraControls.classList.remove('hidden');
+            if (startCameraWrapper) startCameraWrapper.classList.add('hidden');
             previewContainer.classList.add('hidden');
             retakeControls.classList.add('hidden');
         } catch (err) {
@@ -507,6 +513,7 @@
             cameraError.classList.remove('hidden');
             cameraErrorMessage.textContent = 'Gagal mengakses kamera: ' + (err.message || 'Izin kamera ditolak.');
             cameraPlaceholder.classList.remove('hidden');
+            if (startCameraWrapper) startCameraWrapper.classList.remove('hidden');
             webcam.classList.add('hidden');
             cameraControls.classList.add('hidden');
         }
@@ -521,6 +528,7 @@
         cameraControls.classList.add('hidden');
         if (previewContainer.classList.contains('hidden')) {
             cameraPlaceholder.classList.remove('hidden');
+            if (startCameraWrapper) startCameraWrapper.classList.remove('hidden');
         }
     }
 

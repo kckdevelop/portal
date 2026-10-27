@@ -66,7 +66,6 @@ class ExhibitionPortalTest extends TestCase
         $response->assertSee('Wisnu Pamungkas');
         $response->assertSee('XII TPM 1');
         $response->assertSee('Teknik Pemesinan');
-        $response->assertSee('Buka Slide Canva');
         $response->assertSee('https://example.com/cnc-part-1.jpg');
     }
 

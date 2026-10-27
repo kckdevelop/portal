@@ -294,9 +294,11 @@
                                     <a href="{{ route('karya.show', $item) }}" class="flex-1 text-center py-2 rounded-xl text-xs font-bold text-slate-800 bg-slate-100 hover:bg-cyan-50 hover:text-cyan-700 transition-colors">
                                         Lihat Detail
                                     </a>
+                                    @if(!empty($item->canva_url))
                                     <a href="{{ $item->canva_url }}" target="_blank" class="p-2 rounded-xl bg-teal-50 hover:bg-teal-100 text-teal-700 text-xs font-bold" title="Slide Canva">
                                         <i class="fa-solid fa-chalkboard-user"></i>
                                     </a>
+                                    @endif
                                 </div>
                             </div>
                         </div>

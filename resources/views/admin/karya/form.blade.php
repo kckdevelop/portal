@@ -350,12 +350,12 @@
                 </div>
             </div>
 
-            <!-- Section 4: Teknologi, Alat, Bahan & Tautan -->
+            <!-- Section 4: Teknologi, Alat, Bahan & Spesifikasi -->
             <div class="border-b border-slate-800 pb-4 pt-3">
                 <h3 class="text-sm font-bold text-white flex items-center gap-2">
-                    <i class="fa-solid fa-code text-cyan-400"></i> Alat, Spesifikasi & Tautan Presentasi
+                    <i class="fa-solid fa-code text-cyan-400"></i> Alat, Spesifikasi & Teknologi
                 </h3>
-                <p class="text-[11px] text-slate-400 mt-0.5">Daftar teknologi/peralatan, link slide Canva, demo, dan repository</p>
+                <p class="text-[11px] text-slate-400 mt-0.5">Daftar teknologi, peralatan, dan komponen karya siswa</p>
             </div>
 
             <div class="space-y-4">

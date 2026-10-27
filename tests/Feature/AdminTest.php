@@ -85,7 +85,6 @@ class AdminTest extends TestCase
             'category' => 'IoT & Robotics',
             'description' => 'Sistem penyiraman otomatis berbasis sensor kelembaban tanah.',
             'tech_stacks' => 'Arduino, Laravel, MQTT',
-            'canva_url' => 'https://www.canva.com/design/test',
             'demo_url' => 'https://iot.musaba.sch.id',
             'github_url' => 'https://github.com/musaba/smart-garden',
             'featured' => 1,

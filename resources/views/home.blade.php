@@ -258,6 +258,7 @@
                                     <span>Detail Karya</span>
                                 </a>
 
+                                @if(!empty($app->canva_url))
                                 <!-- Canva Presentation Button -->
                                 <a 
                                     href="{{ $app->canva_url }}" 
@@ -270,6 +271,7 @@
                                     <span>Lihat Presentasi</span>
                                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                                 </a>
+                                @endif
                             </div>
 
                         </div>
@@ -477,7 +479,16 @@
         document.getElementById('modalClass').textContent = app.student_class || 'SMK Muhammadiyah 1 Bantul';
         document.getElementById('modalDesc').textContent = app.description;
         document.getElementById('modalImg').src = app.thumbnail_url || app.thumbnail;
-        document.getElementById('modalCanvaBtn').href = app.canva_url;
+        
+        const canvaBtn = document.getElementById('modalCanvaBtn');
+        if (canvaBtn) {
+            if (app.canva_url) {
+                canvaBtn.href = app.canva_url;
+                canvaBtn.classList.remove('hidden');
+            } else {
+                canvaBtn.classList.add('hidden');
+            }
+        }
 
         // Render tech tags
         const techContainer = document.getElementById('modalTech');
